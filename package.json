@@ -2,7 +2,7 @@
   "name": "custom-new-folder",
   "displayName": "custom-new-folder",
   "publisher": "sway007",
-  "description": "",
+  "description": "根据自定义模板新建文件夹",
   "version": "0.0.1",
   "engines": {
     "vscode": "^1.46.0"
@@ -60,5 +60,9 @@
   },
   "dependencies": {
     "fs-extra": "^9.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Sway007/vscode-custom-new-folder.git"
   }
 }
