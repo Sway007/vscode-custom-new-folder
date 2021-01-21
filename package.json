@@ -3,7 +3,7 @@
   "displayName": "custom-new-folder",
   "publisher": "sway007",
   "description": "根据自定义模板新建文件夹",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.46.0"
   },
@@ -27,6 +27,16 @@
           "command": "new-folder.helloWorld"
         }
       ]
+    },
+    "configuration": {
+      "title": "CustomNewFolder",
+      "properties": {
+        "CustomNewFolder.template.path": {
+          "type": "string",
+          "default": "",
+          "description": "Specifies the folder path containing templates."
+        }
+      }
     }
   },
   "scripts": {
@@ -36,7 +46,8 @@
     "lint": "eslint src --ext ts",
     "test": "node ./out/test/runTest.js",
     "vscode:prepublish": "webpack --mode production",
-    "webpack": "webpack --mode development"
+    "webpack": "webpack --mode development",
+    "pack": "vsce package"
   },
   "devDependencies": {
     "@babel/core": "^7.12.10",

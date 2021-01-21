@@ -18,7 +18,6 @@ export function activate(context: vscode.ExtensionContext) {
   let disposable = vscode.commands.registerCommand(
     "new-folder.helloWorld",
     (arg) => {
-      console.log(arg);
       vscode.window.showQuickPick(fetchTemplateOptions()).then((temp) => {
         if (temp) {
           vscode.window.showInformationMessage(`You choose template: ${temp}`);
